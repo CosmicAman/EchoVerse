@@ -5,7 +5,7 @@ import Write from './pages/Write';
 import Profile from './pages/Profile';
 import Community from './pages/Community';
 import Settings from './pages/Settings';
-import Auth from './pages/auth';
+import Auth from './pages/Auth';
 import { auth } from './firebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
 import './reset.module.css';
