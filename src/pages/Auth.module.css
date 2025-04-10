@@ -1,0 +1,70 @@
+.authContainer {
+  padding: 2rem 1rem;
+  max-width: 400px;
+  margin: 3rem auto;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.authContainer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #222831;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.authForm input {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.authForm button {
+  padding: 0.75rem 1rem;
+  background-color: #7effb2;
+  color: #222831;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.authForm button:hover {
+  background-color: #fdcb6e;
+}
+
+.toggleText {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.toggleText span {
+  color: #ff9ff3;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.googleButton {
+  background-color: #ff9ff3;
+  color: #222831;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+}
+
+.googleButton:hover {
+  background-color: #fdcb6e;
+}

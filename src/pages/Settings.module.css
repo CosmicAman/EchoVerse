@@ -1,0 +1,119 @@
+.container {
+  padding: 2rem 1rem;
+  background-color: #f7f1e3;
+  color: #222831;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222831;
+}
+
+.avatarPreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1.2rem 0;
+  border: 4px solid #ff9ff3;
+  transition: transform 0.3s ease;
+}
+
+.avatarPreview:hover {
+  transform: scale(1.05);
+}
+
+.fileInput {
+  margin: 1rem 0;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.fileInput:hover {
+  border-color: #7effb2;
+}
+
+.preAvatarGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 340px;
+  margin: 1.5rem 0;
+}
+
+.preAvatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.preAvatar:hover {
+  transform: scale(1.1);
+  border-color: #ff9ff3;
+}
+
+.selected {
+  border: 3px solid #7effb2 !important;
+}
+
+.uploadButton {
+  padding: 0.7rem 1.5rem;
+  background-color: #ff9ff3;
+  color: #222831;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.uploadButton:hover {
+  background-color: #fdcb6e;
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .avatarPreview {
+    width: 100px;
+    height: 100px;
+  }
+
+  .preAvatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .uploadButton {
+    font-size: 1rem;
+  }
+
+  .preAvatarGrid {
+    gap: 0.75rem;
+  }
+}

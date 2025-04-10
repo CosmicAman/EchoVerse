@@ -1,0 +1,161 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f1e3;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222831;
+}
+
+/* Hamburger button styles */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .nav button:focus,
+  .logoutBtn:focus {
+    outline: 2px solid #ff9ff3;
+    outline-offset: 2px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #222831;
+  transition: all 0.3s ease;
+}
+
+/* Mobile nav menu */
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f7f1e3;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.show {
+  display: flex;
+}
+
+.nav button {
+  padding: 0.5rem 1.2rem;
+  background-color: #ff9ff3;
+  color: #222831;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 90%;
+  max-width: 300px;
+}
+
+.nav button:hover {
+  background-color: #fdcb6e;
+}
+
+/* Logout button specific style */
+.nav .logoutBtn {
+  background-color: #ff4d5b; /* Sets the background color to a red shade */
+  color: #222831; /* Sets the text color */
+  padding: 0.5rem 1.2rem; /* Adds padding for spacing */
+  border: none; /* Removes any border */
+  border-radius: 8px; /* Rounds the corners */
+  font-weight: bold; /* Makes the text bold */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  transition: background 0.3s; /* Smooth transition for background color changes */
+  width: 90%; /* Sets the width to 90% of the container */
+  max-width: 300px; /* Limits the maximum width to 300px */
+}
+
+.nav .logoutBtn:hover {
+  background-color: #ff0000; /* Changes the background color to a lighter red on hover */
+}
+
+.nav .logoutBtn:active{
+   background-color: rgb(187, 255, 0);
+}
+
+.active {
+  background-color: #7effb2 !important;
+  border: 2px solid #222831;
+}
+
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #222831;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff9ff3;
+}
+
+.username {
+  font-size: 0.9rem;
+}
+
+/* Desktop alignment */
+@media (min-width: 768px) {
+  .userBox {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: static;
+    width: auto;
+    background: none;
+    padding: 0;
+    gap: 1rem;
+    box-shadow: none;
+  }
+
+  .nav button,
+  .logoutBtn {
+    width: auto;
+    max-width: none;
+    padding: 0.4rem 1rem;
+  }
+}
