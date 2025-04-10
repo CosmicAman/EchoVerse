@@ -1,17 +1,48 @@
 .authContainer {
+  min-height: 100vh;
+  width: 100%;
   padding: 2rem 1rem;
-  max-width: 400px;
-  margin: 3rem auto;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #f3d89a, #ff9ff3);
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-.authContainer h2 {
+.authCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(241, 210, 170, 0.8);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .authCard {
+    flex-direction: row;
+    padding: 3rem;
+  }
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-weight: bold;
   color: #222831;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .authForm {
@@ -22,49 +53,105 @@
 
 .authForm input {
   padding: 0.75rem 1rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
   font-size: 1rem;
+  border: 2px solid #cfbaef;
+  border-radius: 1rem;
+  outline: none;
+  transition: 0.3s ease;
 }
 
-.authForm button {
+.authForm input:focus {
+  border-color: #7effb2;
+  box-shadow: 0 0 0 2px #7effb260;
+}
+
+.authBtn {
   padding: 0.75rem 1rem;
-  background-color: #7effb2;
+  background-color: #ff9ff3;
   color: #222831;
-  font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.authForm button:hover {
+.authBtn:hover {
   background-color: #fdcb6e;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.googleBtn:hover {
+  background-color: #f1f1f1;
+}
+
+.separator {
+  text-align: center;
+  margin: 1rem 0;
+  color: #aaa;
 }
 
 .toggleText {
+  text-align: center;
+  font-size: 0.9rem;
   margin-top: 1rem;
-  font-size: 0.95rem;
 }
 
 .toggleText span {
-  color: #ff9ff3;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: underline;
-}
-.googleButton {
-  background-color: #ff9ff3;
-  color: #222831;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  border: none;
+  color: #ff6bcb;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 0.5rem;
-  transition: background 0.3s;
 }
 
-.googleButton:hover {
-  background-color: #fdcb6e;
+.aboutCard {
+  flex: 1;
+  padding: 2rem;
+  background: #fff8f0;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  color: #222831;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  border-left: 6px solid #ff9ff3;
+  margin-top: 2rem;
+}
+
+.aboutCard h3 {
+  font-size: 1.5rem;
+  color: #ff6bcb;
+}
+
+.aboutCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.aboutTagline {
+  font-style: italic;
+  color: #fdcb6e;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .aboutCard {
+    margin-top: 0;
+  }
 }
